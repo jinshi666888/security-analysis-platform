@@ -1,0 +1,63 @@
+/* 全局字体放大：Element Plus 字号体系整体上调，保证清晰度（矢量渲染不受影响）
+   并保持布局完整（配合各页面 scoped 字号同步放大，经构建与多分辨率验证）。 */
+
+:root {
+  /* Element Plus 字号档位：默认 20/18/16/14/13/12 → 上调 2px */
+  --el-font-size-extra-large: 22px;
+  --el-font-size-large: 20px;
+  --el-font-size-medium: 18px;
+  --el-font-size-base: 16px;
+  --el-font-size-small: 15px;
+  --el-font-size-extra-small: 14px;
+}
+
+html { font-size: 16px; }
+body { font-size: 16px; }
+
+/* ===== 组件级字号覆盖 ===== */
+
+/* 表格：字号+2，行高随内容自适应 */
+.el-table { font-size: 16px; }
+.el-table .el-table__cell { padding: 12px 0; }
+.el-table .cell { line-height: 1.6; }
+
+/* 表单与输入 */
+.el-form-item__label { font-size: 16px; }
+.el-input__inner { font-size: 16px; }
+.el-textarea__inner { font-size: 16px; }
+.el-select-dropdown__item { font-size: 16px; }
+.el-select-dropdown__empty { font-size: 15px; }
+.el-checkbox__label { font-size: 16px; }
+.el-radio__label { font-size: 16px; }
+.el-switch__label { font-size: 15px; }
+
+/* 按钮/标签/分页 */
+.el-button { font-size: 16px; }
+.el-button--small { font-size: 14px; }
+.el-tag { font-size: 14px; }
+.el-pagination { font-size: 15px; }
+.el-pagination .el-pagination__total,
+.el-pagination .el-pagination__jump { font-size: 15px; }
+
+/* 导航菜单与标签页 */
+.el-menu-item, .el-sub-menu__title { font-size: 17px; }
+.el-tabs__item { font-size: 17px; }
+.el-breadcrumb { font-size: 15px; }
+.el-dropdown-menu__item { font-size: 16px; }
+
+/* 弹窗与反馈 */
+.el-dialog__title { font-size: 19px; }
+.el-dialog__body { font-size: 16px; }
+.el-message__content { font-size: 16px; }
+.el-notification__title { font-size: 17px; }
+.el-notification__content { font-size: 15px; }
+.el-alert__title { font-size: 16px; }
+.el-alert__description { font-size: 15px; }
+.el-loading-text { font-size: 16px; }
+.el-empty__description { font-size: 15px; }
+.el-timeline-item__timestamp { font-size: 14px; }
+
+/* 展示类 */
+.el-descriptions__label, .el-descriptions__content { font-size: 16px; }
+.el-card__body { font-size: 16px; }
+.el-tooltip__popper { font-size: 14px; }
